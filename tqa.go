@@ -51,6 +51,15 @@ func actionFlags(f *flag.FlagSet) {
 		case "k":
 			apiKey := f.Arg(1)
 			if apiKey == "" {
+				builtInKey, err := store.GetOpenAiApiKey(tqaPath)
+				if err != nil {
+					fmt.Println(err)
+					return
+				}
+				if builtInKey != "" {
+					fmt.Println("Api Key:", builtInKey)
+					return
+				}
 				fmt.Println("No API key.")
 				return
 			}

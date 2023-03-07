@@ -105,6 +105,14 @@ func SetOpenAiApiKey(path string, apiKey string) error {
 	return nil
 }
 
+func GetOpenAiApiKey(path string) (string, error) {
+	config, err := GetConfig(path)
+	if err != nil {
+		return "", err
+	}
+	return config.OpenAiApiKey, nil
+}
+
 func UpdateContent(path string, content []gpt3.ChatCompletionMessage) error {
 	timestamp := time.Now().Unix()
 	contentPath := filepath.Join(path, contentDirname, fmt.Sprintf("%d", timestamp)+".txt")
