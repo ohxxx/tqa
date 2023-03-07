@@ -37,7 +37,7 @@ func DownloadFile(filePath string) {
 	filename := strings.Split(filepath.Base(filePath), ".")[0]
 
 	var md strings.Builder
-	md.WriteString("# TGPT \n\n")
+	md.WriteString("# TQA \n\n")
 	for _, msg := range messages {
 		if msg.Role == "user" {
 			md.WriteString("## Question \n> " + msg.Content + "\n\n")
@@ -54,7 +54,7 @@ func DownloadFile(filePath string) {
 		return
 	}
 
-	downloadFile, err := os.Create(filepath.Join(downloadDir, "TGPT_"+filename+".md"))
+	downloadFile, err := os.Create(filepath.Join(downloadDir, "TQA_"+filename+".md"))
 	if err != nil {
 		fmt.Printf("Error creating file: %v\n", err)
 		return

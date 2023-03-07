@@ -12,20 +12,20 @@
 ## Install
 
 ```sh
-go get github.com/ohxxx/tgpt
+go get github.com/ohxxx/tqa
 ```
 
 ## Usage
 
 ```
 # Have a conversation
-tgpt
+tqa
 
 # Set API key.
-tgpt k OPENAI_API_KEY
+tqa k OPENAI_API_KEY
 
 # Exporting the last conversation
-tgpt e
+tqa e
 ```
 
 ## Conversation

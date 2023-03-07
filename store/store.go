@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ohxxx/tgpt/utils"
+	"github.com/ohxxx/tqa/utils"
 	gpt3 "github.com/sashabaranov/go-gpt3"
 )
 

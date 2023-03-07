@@ -1,4 +1,4 @@
-module github.com/ohxxx/tgpt
+module github.com/ohxxx/tqa
 
 go 1.20
 
