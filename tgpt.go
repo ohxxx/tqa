@@ -114,10 +114,6 @@ func processQA() {
 	go func() {
 		for {
 			input := getInput()
-			if input == "" {
-				iptChan <- ""
-				return
-			}
 			iptChan <- input
 		}
 	}()
